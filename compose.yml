@@ -1,0 +1,24 @@
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant@sha256:a9fab1c5cb63a7c721d38b2ba40cdcac3acb9cd70be3fe3838336f71e73d9443"
+    volumes:
+      - ./hass-config:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - 8123:8123
+  mosquitto:
+    image: eclipse-mosquitto:2.0.20
+    hostname: mosquitto
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config/:/mosquitto/config/
+      - ./mosquitto/log/:/mosquitto/log/
+      - ./mosquitto/data/:/mosquitto/data/
