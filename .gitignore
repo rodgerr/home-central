@@ -6,7 +6,7 @@ mosquitto/log/
 mosquitto/data/
 
 #home assistant
-hass-config/
+hass-config/**
 
 
 # VS Code files for those working on multiple tools
