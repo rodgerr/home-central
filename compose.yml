@@ -1,7 +1,7 @@
 services:
   homeassistant:
     container_name: homeassistant
-    image: "ghcr.io/home-assistant/home-assistant@sha256:2eb83307a08de3287822b648fce4cbf1364423b55f2af623c149c6b21c2cef00"
+    image: "ghcr.io/home-assistant/home-assistant@sha256:612d76760b544cb40b7ba01387fdac964c59a6a550a50a4d30b4773c822d2918"
     volumes:
       - ./hass-config:/config
       - /etc/localtime:/etc/localtime:ro
