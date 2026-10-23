@@ -11,7 +11,7 @@ services:
     ports:
       - 8123:8123
   mosquitto:
-    image: eclipse-mosquitto:2.0.22@sha256:d219d3a72847f3aed6a1d66975972d3b17f86e39e8f6f6b86b4088b879c1a2d6
+    image: eclipse-mosquitto:2.0.22@sha256:09b62ff32c2e7b64d4b431b9a89236073289b68db273de2b089edeb9b0d92b5c
     hostname: mosquitto
     container_name: mosquitto
     restart: unless-stopped
